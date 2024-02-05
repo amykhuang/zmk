@@ -1,0 +1,54 @@
+/*
+ * Copyright (c) 2023 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/rgb.h>
+
+/ {
+    chosen {
+        // 29 keys.
+        // zmk,matrix-transform = &dual_1u_transform;
+
+        // 28 keys. Center two thumb keys replaced by a single 2u key. Remember to adjust your
+        // keymap accordingly!
+        zmk,matrix-transform = &single_2u_transform;
+    };
+};
+
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+
+        base {
+            display-name = "Base";
+            bindings = <
+&kp Q       &kp W       &kp E      &kp R &kp T    &kp Y      &kp U       &kp I          &kp O         &kp P
+&kp A       &kp S       &kp D      &kp F &kp G    &kp H      &kp J       &kp K          &kp L         &mo 2
+&kp Z       &kp X       &kp C      &kp V &mt SHIFT SPACE     &kp B       &kp N          &kp M
+            >;
+        };
+
+        lower {
+            display-name = "Lower";
+            bindings = <
+&kp EXCL &kp AT    &kp HASH &kp DLLR &kp PRCNT &kp CARET &kp AMPS  &kp ASTRK &kp LPAR &kp RPAR
+&trans   &kp TILDE &kp DQT  &kp PIPE &trans    &trans    &kp UNDER &kp PLUS  &kp LBRC &kp RBRC
+&trans   &trans    &trans   &trans   &trans    &trans    &trans    &kp C_RESET
+            >;
+        };
+
+        upper {
+            display-name = "Upper";
+            bindings = <
+&kp N1   &kp N2    &kp N3  &kp N4   &kp N5   &kp N6   &kp N7    &kp N8    &kp N9    &kp N0
+&kp BSPC &kp ESC   &kp TAB &kp SEMI &kp SQT  &kp LEFT &kp DOWN  &kp UP    &kp RIGHT &trans
+&mo 1    &trans    &trans  &trans   &mt LSHIFT RET    &trans   &trans    &trans
+            >;
+        };
+    };
+};

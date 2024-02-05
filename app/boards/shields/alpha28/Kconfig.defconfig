@@ -1,0 +1,6 @@
+if SHIELD_ALPHA28
+
+config ZMK_ALPHA28
+    default "Alpha 28"
+
+endif
