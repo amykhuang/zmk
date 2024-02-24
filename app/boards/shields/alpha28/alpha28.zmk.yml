@@ -1,6 +1,6 @@
 file_format: "1"
 id: alpha28
-name: ALPHA28
+name: Alpha28
 type: shield
 url: https://github.com/PyrooL/Alpha/tree/master
 requires: [pro_micro]

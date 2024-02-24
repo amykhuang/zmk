@@ -1,6 +1,6 @@
 if SHIELD_ALPHA28
 
-config ZMK_ALPHA28
+config ZMK_KEYBOARD_NAME
     default "Alpha 28"
 
 endif
